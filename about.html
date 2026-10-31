@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Terngu Blessing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Site header with responsive navigation (same on every page) -->
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main navigation">
+    <a class="logo" href="index.html">Terngu<span>Blessing</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul id="navList">
+      <li><a class="link" href="index.html">Home</a></li>
+      <li><a class="link active" href="about.html">About</a></li>
+      <li><a class="link" href="projects.html">Projects</a></li>
+      <li><a class="link" href="planner.html">Planner</a></li>
+      <li><a class="link" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+<section class="page-title"><div class="wrap"><h1>About me</h1><p class="lead">My background, goals and the things I enjoy.</p></div></section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Educational background</h2>
+    <!-- Table: education timeline -->
+    <div class="table-scroll">
+      <table>
+        <caption class="lead" style="text-align:left;padding-bottom:.6rem">Academic history</caption>
+        <thead><tr><th>Institution</th><th>Qualification</th><th>Years</th></tr></thead>
+        <tbody>
+          <tr><td>Terngu Blessing University</td><td>B.Sc. Computer Science</td><td>2024 - 2028</td></tr>
+          <tr><td>Terngu Blessing Secondary School</td><td>Senior School Certificate</td><td>2018 - 2024</td></tr>
+          <tr><td>Online Courses</td><td>Web Development Certificate</td><td>2025</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap grid cols-2">
+    <article>
+      <h2>Career aspirations</h2>
+      <p class="lead">I want to become a front-end engineer who builds accessible, fast and beautiful products. In the next five years I plan to:</p>
+      <ol class="checklist" style="margin-top:1rem">
+        <li>Complete an internship at a tech company</li>
+        <li>Contribute to open-source projects</li>
+        <li>Grow into a full-stack developer</li>
+      </ol>
+    </article>
+    <article>
+      <h2>Technical skills</h2>
+      <!-- Skill bars: change the width values to match your level -->
+      <div class="skill"><div><span>HTML &amp; CSS</span><span>90%</span></div><div class="bar"><span style="width:90%"></span></div></div>
+      <div class="skill"><div><span>JavaScript</span><span>80%</span></div><div class="bar"><span style="width:80%"></span></div></div>
+      <div class="skill"><div><span>Python</span><span>70%</span></div><div class="bar"><span style="width:70%"></span></div></div>
+      <div class="skill"><div><span>Git &amp; GitHub</span><span>75%</span></div><div class="bar"><span style="width:75%"></span></div></div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid cols-2">
+    <article>
+      <h2>Hobbies and interests</h2>
+      <ul class="tags"><li>Coding</li><li>Photography</li><li>Football</li><li>Reading</li><li>Music</li><li>UI sketching</li></ul>
+    </article>
+    <!-- Multimedia: add your own files to the media folder -->
+    <article class="media-box">
+      <h2>Meet me</h2>
+      <video controls preload="none" poster="">
+        <source src="media/intro.mp4" type="video/mp4">
+        Your browser does not support the video element.
+      </video>
+      <p class="lead" style="margin:1rem 0 .5rem">Or listen to my short introduction:</p>
+      <audio controls preload="none"><source src="media/intro.mp3" type="audio/mpeg">Your browser does not support audio.</audio>
+    </article>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; 2026 Terngu Blessing &middot; University  Project</p>
+    <p><a href="mailto:help@miva.university">help@miva.university</a></p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

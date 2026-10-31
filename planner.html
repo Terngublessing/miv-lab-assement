@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Academic Planner | Terngu Blessing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Site header with responsive navigation (same on every page) -->
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main navigation">
+    <a class="logo" href="index.html">Terngu<span>Blessing</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul id="navList">
+      <li><a class="link" href="index.html">Home</a></li>
+      <li><a class="link" href="about.html">About</a></li>
+      <li><a class="link" href="projects.html">Projects</a></li>
+      <li><a class="link active" href="planner.html">Planner</a></li>
+      <li><a class="link" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+<section class="page-title"><div class="wrap"><h1>Academic planner</h1><p class="lead">Add tasks, tick them off when done, and delete what you no longer need. Tasks are saved in your browser.</p></div></section>
+<section class="section">
+  <div class="wrap">
+    <!-- Task form: handled by script.js -->
+    <form id="taskForm" class="planner-form" novalidate>
+      <div><label for="taskTitle">Task</label><input id="taskTitle" type="text" placeholder="e.g. Finish database assignment" required></div>
+      <div><label for="taskCourse">Course</label><input id="taskCourse" type="text" placeholder="e.g. CSC 301"></div>
+      <div><label for="taskDate">Due date</label><input id="taskDate" type="date"></div>
+      <button class="btn" type="submit">Add task</button>
+    </form>
+    <span class="error-msg" id="taskError" role="alert"></span>
+    <p class="counter" id="taskCounter"></p>
+    <ul class="task-list" id="taskList" aria-live="polite"></ul>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; 2026 Terngu Blessing &middot; University Project</p>
+    <p><a href="mailto:help@miva.university">help@miva.university</a></p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
