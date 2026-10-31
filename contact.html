@@ -27,12 +27,49 @@
 <section class="page-title"><div class="wrap"><h1>Contact me</h1><p class="lead">Questions, collaborations or internship offers: send me a message.</p></div></section>
 <section class="section">
   <div class="wrap contact-grid">
-    <form id="contactForm" novalidate>
-      <div id="formStatus" class="form-status" role="alert"></div>
-      <div class="field"><label for="name">Name</label><input id="name" type="text" autocomplete="name"><span class="error-msg" id="nameError"></span></div>
-      <div class="field"><label for="email">Email address</label><input id="email" type="email" autocomplete="email"><span class="error-msg" id="emailError"></span></div>
-      <div class="field"><label for="phone">Phone number</label><input id="phone" type="tel" autocomplete="tel" placeholder="Digits only, e.g. 08012345678"><span class="error-msg" id="phoneError"></span></div>
-      <div class="field"><label for="message">Message</label><textarea id="message" rows="6"></textarea><span class="error-msg" id="messageError"></span></div>
+    <form id="contact-form" novalidate>
+      <!-- Changed status div ID to match JS 'form-success' -->
+      <div id="form-success" class="form-status" role="alert" style="display:none; color:green; margin-bottom:1rem;"></div>
+      
+      <!-- Added name attributes and corrected error IDs to match JS (-error suffix) -->
+      <div class="field">
+        <label for="c-name">Name</label>
+        <input id="c-name" name="user_name" type="text" autocomplete="name">
+        <span class="error-msg" id="c-name-error"></span>
+      </div>
+
+      <div class="field">
+        <label for="c-email">Email address</label>
+        <input id="c-email" name="user_email" type="email" autocomplete="email">
+        <span class="error-msg" id="c-email-error"></span>
+      </div>
+
+      <div class="field">
+        <label for="c-phone">Phone number</label>
+        <input id="c-phone" name="user_phone" type="tel" autocomplete="tel" placeholder="Digits only, e.g. 08012345678">
+        <span class="error-msg" id="c-phone-error"></span>
+      </div>
+
+      <!-- Added Subject field required by your JS rules -->
+      <div class="field">
+        <label for="c-subject">Reason</label>
+        <select id="c-subject" name="subject">
+          <option value="">Please choose a reason</option>
+          <option value="Question">Question</option>
+          <option value="Collaboration">Collaboration</option>
+          <option value="Internship">Internship Offer</option>
+        </select>
+        <span class="error-msg" id="c-subject-error"></span>
+      </div>
+
+      <div class="field">
+        <label for="c-message">Message</label>
+        <textarea id="c-message" name="message" rows="6"></textarea>
+        <!-- Added character counter span matching JS 'c-count' -->
+        <small id="c-count" style="display:block; text-align:right; color:#666;">0 / 500</small>
+        <span class="error-msg" id="c-message-error"></span>
+      </div>
+
       <button class="btn" type="submit">Send message</button>
     </form>
     <aside class="card">
@@ -49,10 +86,12 @@
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <p>&copy; 2026 Your Name &middot; University Term Project</p>
-    <p><a href="mailto:you@university.edu">you@university.edu</a></p>
+    <p>&copy; 2026 Terngu Blessing &middot; University Term Project</p>
+    <p><a href="mailto:t.blessing7927@miva.edu.ng">t.blessing7927@miva.edu.ng</a></p>
   </div>
 </footer>
+<!-- Required EmailJS Browser SDK -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
