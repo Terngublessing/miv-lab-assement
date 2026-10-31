@@ -1,10 +1,8 @@
 (function () {
   // Initialize EmailJS
   emailjs.init("0JINtFbPvejSuO7Y9");
-
   var form = document.getElementById('contact-form');
   if (!form) return;
-
   var success = document.getElementById('form-success');
   var message = document.getElementById('c-message');
   var count = document.getElementById('c-count');
